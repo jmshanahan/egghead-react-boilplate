@@ -4,6 +4,7 @@
   "description": "React tooling",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Joseph Shanahan",
@@ -16,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/jmshanahan/egghead-react-boilplate/issues"
   },
-  "homepage": "https://github.com/jmshanahan/egghead-react-boilplate#readme"
+  "homepage": "https://github.com/jmshanahan/egghead-react-boilplate#readme",
+  "devDependencies": {
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
+  }
 }
