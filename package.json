@@ -1,0 +1,11 @@
+{
+  "name": "reacttooling",
+  "version": "0.1.0",
+  "description": "React tooling",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joseph Shanahan",
+  "license": "ISC"
+}
