@@ -4,8 +4,10 @@
   "description": "React tooling",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --open --config webpack.config.prod.js",
-    "dev": "webpack-dev-server --config webpack.config.dev.js",
+    "build": "webpack --config webpack.config.prod.js",
+    "dev": "webpack-dev-server --open --config webpack.config.dev.js",
+    "dev:hot": "webpack-dev-server --open --hot --config webpack.config.dev.js",
+
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Joseph Shanahan",
@@ -37,6 +39,7 @@
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "react-hot-loader": "^4.12.14"
   }
 }
