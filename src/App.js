@@ -1,21 +1,38 @@
-import React , {Component} from 'react';
-import {hot} from 'react-hot-loader';
+import React, { Component, Suspense } from "react";
+import { hot } from "react-hot-loader";
 
-class App extends Component{
-    state = {
-        count: 0
-    }
+const Warning = React.lazy(() => import("./Warning"));
 
-    render(){
-        const {count} = this.state;
-        return (
-        <div>
+class App extends Component {
+  state = {
+    count: 0
+  };
+
+  render() {
+    const { count } = this.state;
+    return (
+      <div>
         <h1>Hello world</h1>
-            <h2 className={count > 10 ? 'warning': null}>Count: {this.state.count}</h2>
-            <button onClick={() => this.setState(state => ({count: state.count + 1}))}>+</button>
-            <button onClick={() => this.setState(state => ({count: state.count - 1}))}>-</button>
-        </div>
-        )
-    }
+        <h2 className={count > 10 ? "warning" : null}>
+          Count: {this.state.count}
+        </h2>
+        <button
+          onClick={() => this.setState(state => ({ count: state.count + 1 }))}
+        >
+          +
+        </button>
+        <button
+          onClick={() => this.setState(state => ({ count: state.count - 1 }))}
+        >
+          -
+        </button>
+        {count > 10 ? (
+          <Suspense fallback={null}>
+            <Warning />
+          </Suspense>
+        ) : null}
+      </div>
+    );
+  }
 }
 export default hot(module)(App);
