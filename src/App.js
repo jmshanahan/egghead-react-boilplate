@@ -1,19 +1,19 @@
-import React, { Component, Suspense } from "react";
-import { hot } from "react-hot-loader";
+import React, { Component, Suspense } from 'react'
+import { hot } from 'react-hot-loader'
 
-const Warning = React.lazy(() => import("./Warning"));
+const Warning = React.lazy(() => import('./Warning'))
 
 class App extends Component {
   state = {
     count: 0
-  };
+  }
 
   render() {
-    const { count } = this.state;
+    const { count } = this.state
     return (
       <div>
         <h1>Hello world</h1>
-        <h2 className={count > 10 ? "warning" : null}>
+        <h2 className={count > 10 ? 'warning' : null}>
           Count: {this.state.count}
         </h2>
         <button
@@ -32,7 +32,7 @@ class App extends Component {
           </Suspense>
         ) : null}
       </div>
-    );
+    )
   }
 }
-export default hot(module)(App);
+export default hot(module)(App)
