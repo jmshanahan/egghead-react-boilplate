@@ -9,6 +9,7 @@ class App extends Component {
   }
 
   render() {
+    // throw new Error('Bang')
     const { count } = this.state
     return (
       <div>

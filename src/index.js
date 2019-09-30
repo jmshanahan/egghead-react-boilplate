@@ -2,11 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import 'core-js'
 import App from './App'
+import DefaultErrorBoundry from './DefaultErrorBoundry'
 import './styles.css'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <DefaultErrorBoundry>
+      <App />
+    </DefaultErrorBoundry>
   </React.StrictMode>,
   document.getElementById('app')
 )
