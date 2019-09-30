@@ -5,4 +5,7 @@ describe('App', () => {
   it('It renders without error', () => {
     render(<App />)
   })
+  it.skip('fails', () => {
+    expect(true).toBe(false)
+  })
 })
